@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import java.net.URL?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.stage.Stage?>
 
@@ -30,30 +31,18 @@
                            <Font size="16.0" />
                         </font>
                      </Button>
-                     <JFXTextField focusColor="#11f54b" labelFloat="true" layoutX="79.0" layoutY="220.0" prefHeight="37.0" prefWidth="320.0" promptText="Usuario" unFocusColor="WHITE">
-                        <font>
-                           <Font size="19.0" />
-                        </font>
-                        <effect>
-                           <ColorAdjust brightness="1.0" contrast="-0.88" hue="-0.52" saturation="-0.43" />
-                        </effect>
-                     </JFXTextField>
-                     <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="48.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+                     <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="50.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                            <Image url="@password_30px.png" />
                         </image>
                      </ImageView>
-                     <JFXPasswordField focusColor="#74b9e1" labelFloat="true" layoutX="77.0" layoutY="316.0" prefHeight="37.0" prefWidth="316.0" promptText="Contraseña" unFocusColor="#f8f5f5">
-                        <effect>
-                           <ColorAdjust brightness="1.0" contrast="-1.0" hue="-0.5" saturation="-0.36" />
-                        </effect></JFXPasswordField>
                      <ImageView fitHeight="98.0" fitWidth="248.0" layoutX="139.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                            <Image url="@Logo%20upv%20(2).png" />
                         </image>
                      </ImageView>
                      <Circle fill="#2e2f30b7" layoutX="231.0" layoutY="130.0" opacity="0.29" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-                     <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="49.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                     <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="47.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                            <Image url="@user_30px.png" />
                         </image>
@@ -61,6 +50,24 @@
                            <ColorAdjust />
                         </effect>
                      </ImageView>
+                     <TextField layoutX="75.0" layoutY="259.0" prefHeight="42.0" prefWidth="322.0" promptText="Usuario" style="-fx-background-color: transparente; -fx-border-image-slice: white; -fx-border-radius: 50;">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <effect>
+                           <ColorAdjust brightness="1.0" />
+                        </effect>
+                     </TextField>
+                     <Line endX="203.0" layoutX="187.0" layoutY="296.0" startX="-100.0" stroke="#fffdfd" />
+                     <PasswordField layoutX="79.0" layoutY="325.0" prefHeight="25.0" prefWidth="315.0" promptText="Contraseña" style="-fx-background-color: transparente;">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <effect>
+                           <ColorAdjust brightness="1.0" />
+                        </effect>
+                     </PasswordField>
+                     <Line endX="203.0" layoutX="187.0" layoutY="362.0" startX="-100.0" stroke="#fffdfd" />
                   </children>
                </AnchorPane>
                <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="1032.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">

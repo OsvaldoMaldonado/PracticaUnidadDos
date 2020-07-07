@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.control.ExpansionPanel.CollapsedPanel?>
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -30,7 +29,7 @@
                            <Font size="24.0" />
                         </font>
                      </Label>
-                     <JFXButton layoutX="693.0" layoutY="5.0" prefHeight="29.0" prefWidth="126.0" text="Cerrar seción" textFill="#f5f4f4">
+                     <Button alignment="BASELINE_LEFT" layoutX="709.0" layoutY="5.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" style="-fx-background-color: transparente;" text="Cerrar seción" textFill="WHITE">
                         <graphic>
                            <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                               <image>
@@ -38,104 +37,7 @@
                               </image>
                            </ImageView>
                         </graphic>
-                     </JFXButton>
-                  </children>
-               </AnchorPane>
-               <AnchorPane layoutY="-1.0" prefHeight="599.0" prefWidth="216.0" style="-fx-background-color: #0E284C;">
-                  <children>
-                     <VBox layoutX="4.0" layoutY="125.0" prefHeight="349.0" prefWidth="212.0">
-                        <children>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Inicio" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@home_30px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Profesores" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@teacher_24px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Materias" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@layers_50px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Aulas" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@school_50px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Disponibilidad" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@checkmark_26px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="199.0" text="Planes" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@google_sheets_50px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                           <JFXButton alignment="BASELINE_LEFT" prefHeight="48.0" prefWidth="209.0" text="Evaluar Profesor" textFill="#f5f4f4">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                              <graphic>
-                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@pencil_32px.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </JFXButton>
-                        </children>
-                     </VBox>
-                     <ImageView fitHeight="66.0" fitWidth="132.0" layoutX="36.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@Logo%20upv%20(2).png" />
-                        </image>
-                     </ImageView>
+                     </Button>
                   </children>
                </AnchorPane>
                <AnchorPane layoutX="218.0" layoutY="154.0" prefHeight="440.0" prefWidth="837.0" stylesheets="@Table.css">
@@ -164,260 +66,76 @@
                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                        </rowConstraints>
                         <children>
-                           <JFXButton prefHeight="93.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="74.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="4" />
-                           <JFXButton prefHeight="69.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="5" />
-                           <JFXButton prefHeight="66.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="6" />
-                           <JFXButton prefHeight="62.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="7" />
-                           <JFXButton prefHeight="75.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                           <JFXButton prefHeight="81.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                           <JFXButton prefHeight="87.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                           <JFXButton prefHeight="78.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                           <JFXButton prefHeight="74.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                           <JFXButton prefHeight="68.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                           <JFXButton prefHeight="70.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                           <JFXButton prefHeight="82.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                           <JFXButton prefHeight="74.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                           <JFXButton prefHeight="63.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                           <JFXButton prefHeight="68.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                           <JFXButton prefHeight="67.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                           <JFXButton prefHeight="86.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                           <JFXButton prefHeight="77.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                           <JFXButton prefHeight="79.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                           <JFXButton prefHeight="76.0" prefWidth="151.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                           <JFXButton prefHeight="84.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                           <JFXButton prefHeight="95.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                           <JFXButton prefHeight="83.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="6" />
-                           <JFXButton prefHeight="78.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="7" />
-                           <JFXButton prefHeight="71.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="77.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="87.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="74.0" prefWidth="78.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="85.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="57.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="81.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="83.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="71.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="9" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="64.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="64.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="63.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="80.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="1">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="78.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="71.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="74.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="72.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="2">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="78.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="103.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="84.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="3">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="4">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="73.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="4">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="87.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="4">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="85.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="4">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="68.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="4">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="71.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="5">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="87.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="6">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="67.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="7">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="83.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="5">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="87.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="6">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="75.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="5" GridPane.rowIndex="7">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="78.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="5">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="80.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="6">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="54.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="6" GridPane.rowIndex="7">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="70.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="5">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="65.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="6">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="76.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="7" GridPane.rowIndex="7">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="86.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="5">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="69.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="6">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
-                           <JFXButton prefHeight="56.0" prefWidth="79.0" style="-fx-border-color: #88dec9;" text=" " GridPane.columnIndex="8" GridPane.rowIndex="7">
-                              <effect>
-                                 <ColorInput paint="#b54141" />
-                              </effect>
-                           </JFXButton>
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                           <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: tranparente; -fx-border-color: #88dec9;" GridPane.columnIndex="9" GridPane.rowIndex="7" />
                         </children>
                      </GridPane>
                      <AnchorPane layoutX="12.0" layoutY="26.0" prefHeight="23.0" prefWidth="791.0" style="-fx-background-color: #88dec9;">
@@ -476,15 +194,6 @@
                      </AnchorPane>
                   </children>
                </AnchorPane>
-               <JFXButton layoutX="1007.0" layoutY="-2.0" prefHeight="33.0" prefWidth="38.0" text=" ">
-                  <graphic>
-                     <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@delete_24px.png" />
-                        </image>
-                     </ImageView>
-                  </graphic>
-               </JFXButton>
                <MenuButton layoutX="766.0" layoutY="135.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="257.0" style="-fx-background-color: #ffffff; -fx-border-color: #88dec9;" text="Selecciona Plan de estudios" textFill="#88dec9">
                  <items>
                    <MenuItem mnemonicParsing="false" text="Action 1" />
@@ -506,6 +215,112 @@
                      </Label>
                   </children>
                </AnchorPane>
+               <AnchorPane prefHeight="599.0" prefWidth="213.0" style="-fx-background-color: #0E284C;">
+                  <children>
+                     <VBox layoutX="4.0" layoutY="125.0" prefHeight="349.0" prefWidth="212.0">
+                        <children>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Inicio" textFill="WHITE">
+                              <graphic>
+                                 <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@home_30px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Profesores" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@teacher_24px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Materias" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@layers_50px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Aulas" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@school_50px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Disponibilidad" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@checkmark_26px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Planes" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@google_sheets_50px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Evaluar Profesor" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@pencil_32px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                        </children>
+                     </VBox>
+                     <ImageView fitHeight="66.0" fitWidth="132.0" layoutX="36.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Logo%20upv%20(2).png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </AnchorPane>
+               <Button layoutX="1015.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="16.0" style="-fx-background-color: transparente;">
+                  <graphic>
+                     <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@delete_24px.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
             </children></AnchorPane>
         </Scene>
     </scene>
