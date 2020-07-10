@@ -38,7 +38,7 @@
                      </ImageView>
                      <ImageView fitHeight="98.0" fitWidth="248.0" layoutX="139.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@Logo%20upv%20(2).png" />
+                           <Image url="@Logo upv (2).png" />
                         </image>
                      </ImageView>
                      <Circle fill="#2e2f30b7" layoutX="231.0" layoutY="130.0" opacity="0.29" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" />
@@ -75,11 +75,7 @@
                      <Image url="@delete_24px(2).png" />
                   </image>
                </ImageView>
-            </children>
-            <stylesheets>
-               <URL value="@../DarkTheme.css" />
-               <URL value="@DarkTheme.css" />
-            </stylesheets></AnchorPane>
+            </children></AnchorPane>
         </Scene>
     </scene>
 </Stage>

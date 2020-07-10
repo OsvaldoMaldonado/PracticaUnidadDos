@@ -26,6 +26,7 @@ com\boros\xlsx\Login.class
 com\boros\xlsx\Prestamos.class
 com\boros\xlsx\Materias.class
 com\boros\xlsx\Carrera.class
+com\boros\main\Controller_Materia.class
 com\boros\xlsx\Uso_Aula_Grupo.class
 com\boros\txt\Disponibilidad.class
 com\boros\xlsx\RunXLSX.class

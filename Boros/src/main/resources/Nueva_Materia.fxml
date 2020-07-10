@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.stage.Stage?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.stage.*?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Stage xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boros.main.Controller_Materia">
     <scene>
         <Scene>
             <AnchorPane prefHeight="598.0" prefWidth="1058.0">
@@ -37,7 +32,7 @@
                </AnchorPane>
                <AnchorPane layoutX="222.0" layoutY="112.0" prefHeight="482.0" prefWidth="837.0" stylesheets="@Table.css">
                   <children>
-                     <AnchorPane layoutX="40.0" layoutY="45.0" prefHeight="279.0" prefWidth="750.0" style="-fx-background-color: #e7f6fc; -fx-border-color: #31deb3;">
+                     <AnchorPane layoutX="40.0" layoutY="45.0" prefHeight="361.0" prefWidth="752.0" style="-fx-background-color: #e7f6fc; -fx-border-color: #31deb3;">
                         <children>
                            <AnchorPane prefHeight="46.0" prefWidth="750.0" style="-fx-background-color: #88dec9; -fx-border-color: #31deb3;">
                               <children>
@@ -50,7 +45,7 @@
                            </AnchorPane>
                            <MenuButton layoutX="14.0" layoutY="115.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="262.0" style="-fx-background-color: #88dec9;" text="Selecciona el plan de estudio" textFill="WHITE">
                              <items>
-                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                               <MenuItem mnemonicParsing="false" text="Ingenieria en Tecnologias de la Informacion" />
                                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
                                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
@@ -65,6 +60,20 @@
                                  <Font size="15.0" />
                               </font>
                            </Button>
+                           <TableView fx:id="Cuatri" layoutY="161.0" prefHeight="200.0" prefWidth="748.0">
+                             <columns>
+                               <TableColumn fx:id="primero" prefWidth="75.0" text="Primero" />
+                               <TableColumn fx:id="segundo" prefWidth="75.0" text="Segundo" />
+                                 <TableColumn fx:id="tercero" prefWidth="75.0" text="Tercero" />
+                                 <TableColumn fx:id="cuarto" prefWidth="75.0" text="Cuarto" />
+                                 <TableColumn fx:id="quinto" prefWidth="75.0" text="Quinto" />
+                                 <TableColumn fx:id="sexto" prefWidth="75.0" text="Sexto" />
+                                 <TableColumn fx:id="septimo" prefWidth="75.0" text="Septimo" />
+                                 <TableColumn fx:id="octavo" prefWidth="75.0" text="Octavo" />
+                                 <TableColumn fx:id="noveno" prefWidth="75.0" text="Noveno" />
+                                 <TableColumn fx:id="decimo" prefWidth="75.0" text="Decimo" />
+                             </columns>
+                           </TableView>
                         </children>
                      </AnchorPane>
                   </children>

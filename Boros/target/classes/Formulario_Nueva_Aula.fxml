@@ -6,17 +6,102 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="485.0" prefWidth="840.0">
+    <AnchorPane prefHeight="598.0" prefWidth="1058.0">
       <children>
-         <AnchorPane prefHeight="598.0" prefWidth="1058.0" style="-fx-background-color: #FFFFF;">
+         <AnchorPane prefHeight="598.0" prefWidth="1058.0" style="-fx-background-color: #ffffff;">
             <children>
+               <AnchorPane layoutX="230.0" layoutY="142.0" prefHeight="422.0" prefWidth="806.0" style="-fx-background-color: #ffffff; -fx-border-color: #88dec9; -fx-border-radius: 25; -fx-border-width: 4;">
+                  <children>
+                     <Label layoutX="26.0" layoutY="159.0" prefHeight="25.0" prefWidth="71.0" text="Nombre:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Button layoutX="613.0" layoutY="346.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #88dec9 #88dec9; -fx-background-radius: 25; -fx-border-color: #5F #77A8EDBA9C; -fx-border-radius: 25;" text="Guardar" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Button>
+                     <Line endX="218.0" layoutX="127.0" layoutY="115.0" startX="-100.0" stroke="#258aee" />
+                     <TextField layoutX="32.0" layoutY="88.0" prefHeight="25.0" prefWidth="306.0" style="-fx-background-color: transparente;">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </TextField>
+                     <Label layoutX="28.0" layoutY="54.0" prefHeight="25.0" prefWidth="199.0" text="Clave/Correo electronico:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField layoutX="31.0" layoutY="182.0" prefHeight="25.0" prefWidth="319.0" style="-fx-background-color: transparente;">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </TextField>
+                     <Line endX="221.0" layoutX="128.0" layoutY="210.0" startX="-100.0" stroke="#258aee" />
+                     <MenuButton layoutX="23.0" layoutY="248.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="322.0" style="-fx-background-color: #ffffff;" text="Seleccionar Carera" textFill="#69b2f5">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </MenuButton>
+                     <Line endX="221.0" layoutX="128.0" layoutY="310.0" startX="-100.0" stroke="#258aee" />
+                     <MenuButton layoutX="460.0" layoutY="50.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ffffff;" text="Tipo de usuario" textFill="#69b2f5">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </MenuButton>
+                     <MenuButton layoutX="460.0" layoutY="155.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ffffff;" text="Nivel de adscripción" textFill="#69b2f5">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </MenuButton>
+                     <MenuButton layoutX="460.0" layoutY="255.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ffffff;" text="Contrato" textFill="#69b2f5">
+                        <items>
+                           <MenuItem mnemonicParsing="false" text="Action 1" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           <MenuItem mnemonicParsing="false" text="Action 2" />
+                        </items>
+                        <font>
+                           <Font name="System Bold" size="15.0" />
+                        </font>
+                     </MenuButton>
+                     <Line endX="221.0" layoutX="552.0" layoutY="114.0" startX="-100.0" stroke="#258aee" />
+                     <Line endX="221.0" layoutX="552.0" layoutY="209.0" startX="-100.0" stroke="#258aee" />
+                     <Line endX="221.0" layoutX="561.0" layoutY="310.0" startX="-100.0" stroke="#258aee" />
+                  </children>
+               </AnchorPane>
                <ExpansionPanel.CollapsedPanel layoutX="175.0" layoutY="183.0" prefWidth="252" />
                <AnchorPane layoutX="213.0" layoutY="28.0" prefHeight="84.0" prefWidth="846.0" style="-fx-background-color: #2B78E4#2974dd;">
                   <children>
@@ -36,7 +121,7 @@
                      </Button>
                      <Button alignment="BASELINE_LEFT" layoutX="11.0" layoutY="1.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" style="-fx-background-color: transparente;" text="Regresar" textFill="WHITE">
                         <graphic>
-                           <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                               <image>
                                  <Image url="@back_24px.png" />
                               </image>
@@ -45,53 +130,16 @@
                      </Button>
                   </children>
                </AnchorPane>
-               <AnchorPane layoutX="218.0" layoutY="112.0" prefHeight="485.0" prefWidth="840.0" style="-fx-background-color: #ffffff;" stylesheets="@Table.css">
+               <AnchorPane layoutX="230.0" layoutY="134.0" prefHeight="34.0" prefWidth="806.0" style="-fx-background-color: #88dec9; -fx-border-radius: 25;">
                   <children>
-                     <AnchorPane layoutX="10.0" layoutY="36.0" prefHeight="265.0" prefWidth="806.0" style="-fx-background-color: #FFFFF; -fx-border-radius: 25; -fx-border-color: #88dec9; -fx-border-width: 4;">
-                        <children>
-                           <MenuButton layoutX="26.0" layoutY="62.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="281.0" style="-fx-background-color: #ffffff; -fx-border-color: #69b2f5;" text="Seleccionar Carrera" textFill="#69b2f5">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="Action 1" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Action 2" />
-                              </items>
-                              <font>
-                                 <Font name="System Bold" size="15.0" />
-                              </font>
-                           </MenuButton>
-                           <MenuButton layoutX="330.0" layoutY="62.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="281.0" style="-fx-background-color: #ffffff; -fx-border-color: #69b2f5;" text="Seleccionar usuario" textFill="#69b2f5">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="Action 1" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Action 2" />
-                              </items>
-                              <font>
-                                 <Font name="System Bold" size="15.0" />
-                              </font>
-                           </MenuButton>
-                           <Button layoutX="640.0" layoutY="198.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #88dec9 #88dec9; -fx-background-radius: 25; -fx-border-color: #5F #77A8EDBA9C; -fx-border-radius: 25;" text="Guardar" textFill="WHITE">
-                              <font>
-                                 <Font name="System Bold" size="18.0" />
-                              </font>
-                           </Button>
-                        </children>
-                     </AnchorPane>
-                  </children>
-               </AnchorPane>
-               <AnchorPane layoutX="229.0" layoutY="148.0" prefHeight="34.0" prefWidth="806.0" style="-fx-background-color: #88dec9; -fx-border-radius: 50;">
-                  <children>
-                     <Label layoutX="13.0" layoutY="5.0" prefHeight="27.0" prefWidth="126.0" text="Prestamos" textFill="WHITE">
+                     <Label layoutX="13.0" layoutY="5.0" text="Nueva Aula" textFill="WHITE">
                         <font>
                            <Font name="System Bold" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </AnchorPane>
-               <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="599.0" prefWidth="213.0" style="-fx-background-color: #0E284C;">
+               <AnchorPane prefHeight="599.0" prefWidth="213.0" style="-fx-background-color: #0E284C;">
                   <children>
                      <VBox layoutX="4.0" layoutY="125.0" prefHeight="349.0" prefWidth="212.0">
                         <children>

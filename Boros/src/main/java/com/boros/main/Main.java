@@ -48,7 +48,7 @@ public class Main extends Application {
 
     public void start(Stage stage) throws Exception{
 
-            stage  = FXMLLoader.load(getClass().getResource("/login.fxml"));
+            stage  = FXMLLoader.load(getClass().getResource("/Nueva_Materia.fxml"));
             stage.show();
 
     }
