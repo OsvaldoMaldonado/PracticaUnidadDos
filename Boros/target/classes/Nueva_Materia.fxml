@@ -4,14 +4,79 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.stage.*?>
 
 <Stage xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boros.main.Controller_Materia">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="598.0" prefWidth="1058.0">
+   <scene>
+      <Scene>
+    <AnchorPane prefHeight="598.0" prefWidth="1058.0">
+      <children>
+         <AnchorPane prefHeight="598.0" prefWidth="1058.0" style="-fx-background-color: #ffffff;">
             <children>
+               <AnchorPane layoutX="230.0" layoutY="142.0" prefHeight="408.0" prefWidth="806.0" style="-fx-background-color: #ffffff; -fx-border-color: #88dec9 #88dec9; -fx-border-radius: 25; -fx-border-width: 4;">
+                  <children>
+                     <Label layoutX="26.0" layoutY="205.0" prefHeight="25.0" prefWidth="71.0" text="Nombre:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="419.0" layoutY="46.0" prefHeight="25.0" prefWidth="103.0" text="Cuatrimestre:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="guardar" layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#gurdarMateria" prefHeight="42.0" prefWidth="122.0" style="-fx-background-color: #88dec9 #88dec9; -fx-background-radius: 25; -fx-border-color: #5F #77A8EDBA9C; -fx-border-radius: 25;" text="Guardar" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Button>
+                     <ComboBox fx:id="plan" layoutX="28.0" layoutY="82.0" prefHeight="27.0" prefWidth="283.0" style="-fx-background-color: white; -fx-border-color: #258aee;" />
+                     <TextField fx:id="credito" layoutX="102.0" layoutY="262.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: transparente;" />
+                     <Line endX="114.0" layoutX="198.0" layoutY="289.0" startX="-100.0" stroke="#258aee" />
+                     <Label layoutX="28.0" layoutY="264.0" prefHeight="25.0" prefWidth="71.0" text="Créditos:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="419.0" layoutY="131.0" prefHeight="25.0" prefWidth="104.0" text="Posición:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="421.0" layoutY="199.0" prefHeight="25.0" prefWidth="150.0" text="Tipo de Materia:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="28.0" layoutY="146.0" prefHeight="25.0" prefWidth="55.0" text="Clave: " textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="28.0" layoutY="46.0" prefHeight="25.0" prefWidth="150.0" text="Plan de Estudios:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="clv" layoutX="78.0" layoutY="141.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: transparente;" />
+                     <Line endX="138.0" endY="1.0" layoutX="178.0" layoutY="167.0" startX="-100.0" stroke="#258aee" />
+                     <Line endX="117.0" layoutX="197.0" layoutY="223.0" startX="-100.0" stroke="#258aee" />
+                     <ComboBox fx:id="cuatrimestre" layoutX="419.0" layoutY="82.0" prefHeight="27.0" prefWidth="283.0" style="-fx-background-color: white; -fx-border-color: #258aee;" />
+                     <TextField fx:id="posicion" layoutX="421.0" layoutY="152.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: transparente;" />
+                     <Line endX="138.0" endY="1.0" layoutX="521.0" layoutY="178.0" startX="-100.0" stroke="#258aee" />
+                     <TextField fx:id="tipo" layoutX="421.0" layoutY="219.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: transparente;" />
+                     <Line endX="138.0" endY="1.0" layoutX="521.0" layoutY="245.0" startX="-100.0" stroke="#258aee" />
+                     <Label layoutX="421.0" layoutY="264.0" prefHeight="25.0" prefWidth="150.0" text="Horas x Semana:" textFill="#69b2f5">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="horas" layoutX="422.0" layoutY="290.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: transparente;" />
+                     <Line endX="138.0" endY="1.0" layoutX="522.0" layoutY="316.0" startX="-100.0" stroke="#258aee" />
+                  </children>
+               </AnchorPane>
                <AnchorPane layoutX="213.0" layoutY="28.0" prefHeight="84.0" prefWidth="846.0" style="-fx-background-color: #2B78E4#2974dd;">
                   <children>
                      <Label layoutX="39.0" layoutY="19.0" prefHeight="50.0" prefWidth="506.0" text="Panel de administración" textFill="#f8f8f8">
@@ -28,61 +93,31 @@
                            </ImageView>
                         </graphic>
                      </Button>
+                     <Button alignment="BASELINE_LEFT" layoutX="11.0" layoutY="1.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" style="-fx-background-color: transparente;" text="Regresar" textFill="WHITE">
+                        <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@back_24px.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
                   </children>
                </AnchorPane>
-               <AnchorPane layoutX="222.0" layoutY="112.0" prefHeight="482.0" prefWidth="837.0" stylesheets="@Table.css">
+               <AnchorPane layoutX="230.0" layoutY="134.0" prefHeight="34.0" prefWidth="806.0" style="-fx-background-color: #88dec9 #88dec9; -fx-border-radius: 25;">
                   <children>
-                     <AnchorPane layoutX="40.0" layoutY="45.0" prefHeight="361.0" prefWidth="752.0" style="-fx-background-color: #e7f6fc; -fx-border-color: #31deb3;">
-                        <children>
-                           <AnchorPane prefHeight="46.0" prefWidth="750.0" style="-fx-background-color: #88dec9; -fx-border-color: #31deb3;">
-                              <children>
-                                 <Label layoutX="14.0" layoutY="8.0" text="Materias" textFill="#fff2f2">
-                                    <font>
-                                       <Font name="System Bold" size="23.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </AnchorPane>
-                           <MenuButton layoutX="14.0" layoutY="115.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="262.0" style="-fx-background-color: #88dec9;" text="Selecciona el plan de estudio" textFill="WHITE">
-                             <items>
-                               <MenuItem mnemonicParsing="false" text="Ingenieria en Tecnologias de la Informacion" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                               <MenuItem mnemonicParsing="false" text="Action 2" />
-                             </items>
-                              <font>
-                                 <Font size="15.0" />
-                              </font>
-                           </MenuButton>
-                           <Button layoutX="14.0" layoutY="61.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="187.0" style="-fx-background-color: #51c603; -fx-background-radius: 15;" text="Agregar Nueva Materia" textFill="WHITE">
-                              <font>
-                                 <Font size="15.0" />
-                              </font>
-                           </Button>
-                           <TableView layoutY="161.0" prefHeight="200.0" prefWidth="748.0">
-                             <columns>
-                               <TableColumn prefWidth="75.0" text="Primero" />
-                               <TableColumn prefWidth="75.0" text="Segundo" />
-                                 <TableColumn prefWidth="75.0" text="Tercero" />
-                                 <TableColumn prefWidth="75.0" text="Cuarto" />
-                                 <TableColumn prefWidth="75.0" text="Quinto" />
-                                 <TableColumn prefWidth="75.0" text="Sexto" />
-                                 <TableColumn prefWidth="75.0" text="Septimo" />
-                                 <TableColumn prefWidth="75.0" text="Octavo" />
-                                 <TableColumn prefWidth="75.0" text="Noveno" />
-                                 <TableColumn prefWidth="75.0" text="Decimo" />
-                             </columns>
-                           </TableView>
-                        </children>
-                     </AnchorPane>
+                     <Label layoutX="13.0" layoutY="5.0" text="Agregar Nueva Materia" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
                   </children>
                </AnchorPane>
                <AnchorPane prefHeight="599.0" prefWidth="213.0" style="-fx-background-color: #0E284C;">
                   <children>
                      <VBox layoutX="4.0" layoutY="125.0" prefHeight="349.0" prefWidth="212.0">
                         <children>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Inicio" textFill="WHITE">
+                           <Button fx:id="inicio" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaInicio" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Inicio" textFill="WHITE">
                               <graphic>
                                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -94,7 +129,7 @@
                                  <Font size="16.0" />
                               </font>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Profesores" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaProfesor" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Profesores" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -106,7 +141,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Materias" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaMateria" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Materias" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -118,7 +153,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Aulas" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaAula" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Aulas" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -142,7 +177,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Planes" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaPlan" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Planes" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -154,7 +189,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Evaluar Profesor" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaEvaluar" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Evaluar Profesor" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -184,7 +219,10 @@
                      </ImageView>
                   </graphic>
                </Button>
-            </children></AnchorPane>
-        </Scene>
-    </scene>
+               <TextField fx:id="nombre" layoutX="326.0" layoutY="339.0" prefHeight="26.0" prefWidth="218.0" style="-fx-background-color: transparente;" />
+            </children>
+         </AnchorPane>
+      </children></AnchorPane>
+</Scene>
+   </scene>
 </Stage>

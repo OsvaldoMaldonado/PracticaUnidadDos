@@ -4,8 +4,12 @@ import java.io.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.boros.main.Controller_AutoEvaluacion;
 import com.boros.mysql.*;
 import com.boros.sqlite.*;
+
+import static com.boros.main.Controller.ekisde;
 
 public class RunTXT {
 
@@ -434,11 +438,7 @@ public class RunTXT {
                         usuarios.add(a);
                     }
                 }
-                System.out.println("*Lectura Realizada*");
-                System.out.println("¿Que desea hacer?");
-                System.out.println("1.- Cargar Base de Datos");
-                System.out.println("2.- Cargar Base de Datos Temporal");
-                carga = c.nextInt();
+                carga = 2;
             } catch (FileNotFoundException e) {
                 System.out.println("No se Encontro el Archivo");
             } catch (IOException e) {
@@ -586,54 +586,54 @@ public class RunTXT {
                     dato2 = aulas.get(i).getNombre();
                     dato3 = aulas.get(i).getTipo();
                     numero = aulas.get(i).getCapacidad();
-                    SQLite.insercion_aulas(dato1, dato2, dato3, numero, "" , "", SQLite.creacion_volatil());
+                    SQLite.insercion_aulas(dato1, dato2, dato3, numero, "" , "", ekisde);
                 }
                 for (int i = 0; i < aula_equipo.size(); i++){
                     numero = aula_equipo.get(i).getId_equipo();
                     dato2 = aula_equipo.get(i).getId_aula();
                     numero1 = aula_equipo.get(i).getCantidad();
-                    SQLite.insercion_aula_equipo(numero, dato2, numero1, SQLite.creacion_volatil());
+                    SQLite.insercion_aula_equipo(numero, dato2, numero1, ekisde);
                 }
                 for (int i = 0; i < carrera.size(); i++){
                     dato1 = String.valueOf(carrera.get(i).getId_carrera());
                     dato2 = carrera.get(i).getNombre_carrera();
-                    SQLite.insercion_carrera(dato1, dato2, SQLite.creacion_volatil());
+                    SQLite.insercion_carrera(dato1, dato2, ekisde);
                 }
                 for (int i = 0; i < categorias_equipo.size(); i++){
                     numero = categorias_equipo.get(i).getId();
                     dato2 = categorias_equipo.get(i).getNombre();
                     dato3 = categorias_equipo.get(i).getDescripcion();
-                    SQLite.insercion_categorias_equipo(numero, dato2, dato3, SQLite.creacion_volatil());
+                    SQLite.insercion_categorias_equipo(numero, dato2, dato3, ekisde);
                 }
                 for (int i = 0; i < disponibilidad.size(); i++){
                     numero = disponibilidad.get(i).getDia();
                     numero1 = disponibilidad.get(i).getEspacio_tiempo();
                     dato3 = disponibilidad.get(i).getClv_usuario();
-                    SQLite.insercion_disponibilidad(numero,numero1,dato3,SQLite.creacion_volatil());
+                    SQLite.insercion_disponibilidad(numero,numero1,dato3, ekisde);
                 }
                 for (int i = 0; i < equipo.size(); i++){
                     numero = equipo.get(i).getId();
                     numero1 = equipo.get(i).getId_categoria();
                     dato3 = equipo.get(i).getNombre();
                     dato4 = equipo.get(i).getDescripcion();
-                    SQLite.insercion_equipo(numero,numero1, dato3, dato4, SQLite.creacion_volatil());
+                    SQLite.insercion_equipo(numero,numero1, dato3, dato4, ekisde);
                 }
                 for (int i = 0; i < grupos.size(); i++){
                     dato1 = grupos.get(i).getClv_grupo();
                     boolean b = grupos.get(i).getTurno();
-                    SQLite.insercion_grupo(dato1, b, SQLite.creacion_volatil());
+                    SQLite.insercion_grupo(dato1, b, ekisde);
                 }
                 for (int i = 0; i < grupo_materia_profesor.size(); i++){
                     dato1 = String.valueOf(grupo_materia_profesor.get(i).getClv_grupo());
                     dato2 = grupo_materia_profesor.get(i).getClv_materia();
                     dato3 = grupo_materia_profesor.get(i).getClv_usuario();
-                    SQLite.insercion_materia_profesor(dato1, dato2, dato3, SQLite.creacion_volatil());
+                    SQLite.insercion_materia_profesor(dato1, dato2, dato3, ekisde);
                 }
                 for (int i = 0; i < login.size(); i++){
                     dato1 = String.valueOf(login.get(i).getClv_usuario());
                     dato2 = login.get(i).getPass_usuario();
                     dato3 = login.get(i).getTipo_usuario();
-                    SQLite.insercion_login(dato1,dato2, SQLite.creacion_volatil());
+                    SQLite.insercion_login(dato1,dato2, ekisde);
                 }
                 for (int i = 0; i <  materias.size(); i++){
                     dato1 = String.valueOf(materias.get(i).getNombre_materia());
@@ -644,7 +644,7 @@ public class RunTXT {
                     dato6 = materias.get(i).getClv_plan();
                     numero3 = materias.get(i).getHoras_x_semana();
                     dato8 = materias.get(i).getTipo_materia();
-                    SQLite.insercion_materia(dato1, dato2, numero, numero1, numero2, dato6, numero3, dato8, SQLite.creacion_volatil());
+                    SQLite.insercion_materia(dato1, dato2, numero, numero1, numero2, dato6, numero3, dato8, ekisde);
                 }
                 for (int i = 0; i < materia_usuario.size(); i++){
                     dato1 = String.valueOf(materia_usuario.get(i).getClv_materia());
@@ -652,19 +652,19 @@ public class RunTXT {
                     dato3 = materia_usuario.get(i).getClv_usuario();
                     numero = materia_usuario.get(i).getPuntos_confianza();
                     numero1 = materia_usuario.get(i).getPuntos_director();
-                    SQLite.insercion_materia_usuarios(dato1, dato2,dato3,numero,numero1, SQLite.creacion_volatil());
+                    SQLite.insercion_materia_usuarios(dato1, dato2,dato3,numero,numero1, ekisde);
                 }
                 for (int i = 0; i < plan_estudios.size(); i++){
                     dato1 = String.valueOf(plan_estudios.get(i).getClv_plan());
                     dato2 = plan_estudios.get(i).getNombre_plan();
                     dato3 = plan_estudios.get(i).getNivel();
                     numero = plan_estudios.get(i).getId_carrera();
-                    SQLite.insercion_plan_estudios(dato1,dato2,dato3, numero, SQLite.creacion_volatil());
+                    SQLite.insercion_plan_estudios(dato1,dato2,dato3, numero, ekisde);
                 }
                 for (int i = 0; i < prestamos.size(); i++){
                     dato1 = String.valueOf(prestamos.get(i).getClv_usuario());
                     numero = prestamos.get(i).getId_carrera();
-                    SQLite.insercion_prestamos(dato1, numero,SQLite.creacion_volatil());
+                    SQLite.insercion_prestamos(dato1, numero, ekisde);
                 }
                 for (int i = 0; i < uso_aula_grupo.size(); i++){
                     numero = uso_aula_grupo.get(i).getDia();
@@ -672,7 +672,7 @@ public class RunTXT {
                     dato3 = uso_aula_grupo.get(i).getId_aula();
                     dato4 = uso_aula_grupo.get(i).getClv_grupo();
                     dato5 = uso_aula_grupo.get(i).getClv_materia();
-                    SQLite.insercion_uso_aula_grupo(numero, numero1, dato3, dato4, dato5, SQLite.creacion_volatil());
+                    SQLite.insercion_uso_aula_grupo(numero, numero1, dato3, dato4, dato5, ekisde);
                 }
                 for (int i = 0; i < usuarios.size(); i++){
                     dato1 = String.valueOf(usuarios.get(i).getClv_usuario());
@@ -680,7 +680,7 @@ public class RunTXT {
                     dato3 = usuarios.get(i).getNombre_usuario();
                     dato4 = usuarios.get(i).getNivel_ads();
                     dato5 = usuarios.get(i).getContrato();
-                    SQLite.insercion_usuarios(dato1, numero, dato3, dato4, dato5, SQLite.creacion_volatil());
+                    SQLite.insercion_usuarios(dato1, numero, dato3, dato4, dato5, ekisde);
                 }
                 break;
             case 3:

@@ -12,8 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="598.0" prefWidth="1058.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
+<?import javafx.stage.Stage?>
+<?import javafx.scene.Scene?>
+<Stage xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boros.main.Controller_NuevoProfesor">
+   <scene>
+      <Scene>
       <AnchorPane layoutX="213.0" layoutY="28.0" prefHeight="84.0" prefWidth="846.0" style="-fx-background-color: #2B78E4#2974dd;">
          <children>
             <Label layoutX="39.0" layoutY="19.0" prefHeight="50.0" prefWidth="506.0" text="Panel de administración" textFill="#f8f8f8">
@@ -207,5 +210,6 @@
             </ImageView>
          </graphic>
       </Button>
-   </children>
-</AnchorPane>
+   </Scene>
+   </scene>
+</Stage>

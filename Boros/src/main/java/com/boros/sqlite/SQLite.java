@@ -1,7 +1,15 @@
 package com.boros.sqlite;
 
+import com.boros.main.Controller_AutoEvaluacion;
+import com.boros.mysql.Conexion;
+import com.boros.txt.Carrera;
+import com.boros.txt.Usuarios;
+
 import java.sql.*;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.boros.main.Controller.ekisde;
 
 public class SQLite {
 
@@ -23,6 +31,7 @@ public class SQLite {
     //10.- Se usan el mismo result query(rs) para que muestre los datos que se encuentre en base al titulo
     //11.- Retorna la conexion para que se guarden para futuras generaciones
     // al chile todos los metodos de insercion son casi que lo mismo lo unico que varia son los datos que se insertaran
+
     public static Connection insercion_aulas(String idaula, String nombrez, String tipoz, int capacidadz, String descripcionz, String ubicacionz, Connection conexion){
         String sql2 = "INSERT INTO aulas(id_aula,nombre,tipo,capacidad,descripcion,ubicacion) VALUES(?,?,?,?,?,?)";
         //Preparacion del query para la agregacion de datos
@@ -41,13 +50,6 @@ public class SQLite {
             String sql3 =  "SELECT id_aula, nombre, tipo, capacidad FROM aulas";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("id_aula"+ "   " + "nombre" + "        " + "tipo" + "        " + "capacidad" + "\n" +rs.getString("id_aula")+
-                        "        " + rs.getInt("capacidad")+
-                        "            " +rs.getString("nombre")+
-                        "         "   + rs.getString("tipo")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -70,11 +72,6 @@ public class SQLite {
             String sql3 = "SELECT clv_grupo,turno FROM grupo";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_grupo" + "   " + "turno" + "\n"+ rs.getString("clv_grupo")+
-                        "          "  +  rs.getBoolean("turno")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -102,18 +99,6 @@ public class SQLite {
             String sql3 = "SELECT nombre_materia,clv_materia,creditos,cuatrimestre,posicion,clv_plan,horas_x_semana,tipo_materia  FROM materia";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("nombre_materia"+ "     "+ "clv_materia" + "     " + "creditos" + "     " + "cuatrimestre" + "     " + "posicion" + "      " + "clv_plan" + "      " + "horas_x_semana" + "     " + "tipo_materia"+ "\n"+
-                        rs.getString("nombre_materia")+
-                        "                 " +     rs.getString("clv_materia")+
-                        "             " +     rs.getInt("creditos")+
-                        "           " +     rs.getInt("cuatrimestre")+
-                        "               " +     rs.getInt("posicion")+
-                        "            " +     rs.getString("clv_plan")+
-                        "           " +     rs.getInt("horas_x_semana")+
-                        "                 " +     rs.getString("tipo_materia")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -137,15 +122,6 @@ public class SQLite {
             String sql3 = "SELECT clv_usuario,idcarrera,nombre_usuario,nivel_ads,contrato FROM usuarios";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_usuario" + "     "+ "idcarrera"+ "     "+ "nombre_usuario"+ "      " + "nivel_ads" + "      " + "contrato"+ "\n"+
-                        rs.getString("clv_usuario")+
-                        "              " + rs.getInt("idcarrera")+
-                        "            " + rs.getString("nombre_usuario")+
-                        "                 " + rs.getString("nivel_ads")+
-                        "            " + rs.getString("contrato")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -167,13 +143,6 @@ public class SQLite {
             String sql3 = "SELECT clv_grupo,clv_materia,clv_usuario FROM grupo_materia_profesor";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_grupo" + "     " + "clv_materia" + "      "+ "clv_usuario"+ "\n"+
-                        rs.getString("clv_grupo")+
-                        "            " +       rs.getString("clv_materia")+
-                        "              " +       rs.getString("clv_usuario")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -195,12 +164,6 @@ public class SQLite {
             String sql3 = "SELECT clv_usuario,pass_usuario,tipo_usuario  FROM login";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_usuario" + "      " + "pass_usuario" + "      "+ "tipo_usuario" + "\n" +rs.getString("clv_usuario")+
-                        "               " +        rs.getString("pass_usuario")+
-                        "               " +        rs.getString("tipo_usuario")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -222,12 +185,6 @@ public class SQLite {
             String sql3 = "SELECT dia,espacio_tiempo,clv_usuario FROM disponibilidad";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("dia" + "      " + "espacio_tiempo" + "      "+ "clv_usuario" + "\n" +rs.getString("dia")+
-                        "       " +        rs.getString("espacio_tiempo")+
-                        "                  " +        rs.getString("clv_usuario")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -247,11 +204,6 @@ public class SQLite {
             String sql3 = "SELECT idcarrera,nombre_carrera FROM carrera";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("idcarrera" + "   " + "nombre_carrera" + "\n"+ rs.getString("idcarrera")+
-                        "         "  +  rs.getString("nombre_carrera") +
-                        "\n");
-            }
             return conexion;
             //Se executa el statement para que se agreguen los datos
         } catch (SQLException throwables) {
@@ -273,11 +225,6 @@ public class SQLite {
             String sql3 = "SELECT clv_usuarios,idcarrera FROM prestamos";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_usuarios" + "   " + "idcarrera" + "\n"+ rs.getString("clv_usuarios")+
-                        "             "  +  rs.getString("idcarrera")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -300,13 +247,6 @@ public class SQLite {
             String sql3 =  "SELECT clv_plan,nombre_plan,nivel,idcarrera FROM plan_estudios";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_plan"+ "   " + "nombre_plan" + "        " + "nivel" + "        " + "idcarrera" + "\n" +rs.getString("clv_plan")+
-                        "         " + rs.getString("nombre_plan")+
-                        "                " +rs.getString("nivel")+
-                        "          "   + rs.getInt("idcarrera")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -330,15 +270,6 @@ public class SQLite {
             String sql3 =  "SELECT clv_materia,clv_plan,clv_usuario,puntos_confianza,puntos_director FROM materia_usuario";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("clv_materia" + "     "+ "clv_plan"+ "     "+ "clv_usuario"+ "      " + "puntos_confianza" + "      " + "puntos_director"+ "\n"+
-                        rs.getString("clv_materia")+
-                        "              " + rs.getString("clv_plan")+
-                        "          " + rs.getString("clv_usuario")+
-                        "              " + rs.getInt("puntos_confianza")+
-                        "                    " + rs.getString("puntos_director")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -363,15 +294,6 @@ public class SQLite {
             String sql3 =  "SELECT dia,espacio_tiempo,id_aula,clv_grupo,clv_materia FROM uso_aula_grupo";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("dia" + "     "+ "espacio_tiempo"+ "     "+ "id_aula"+ "      " + "clv_grupo" + "      " + "clv_materia"+ "\n"+
-                        rs.getInt("dia")+
-                        "      " + rs.getInt("espacio_tiempo")+
-                        "                 " + rs.getString("id_aula")+
-                        "           " + rs.getString("clv_grupo")+
-                        "            " + rs.getString("clv_materia")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -393,12 +315,6 @@ public class SQLite {
             String sql3 = "SELECT id_equipo,id_aula,cantidad FROM aula_equipo";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("id_equipo" + "      " + "id_aula" + "      "+ "cantidad" + "\n" +rs.getInt("id_equipo")+
-                        "             " +        rs.getString("id_aula")+
-                        "           " +        rs.getInt("cantidad")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -421,13 +337,6 @@ public class SQLite {
             String sql3 =  "SELECT id_equipo,id_categoria,nombre,descripcion FROM equipo";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("id_equipo"+ "   " + "id_categoria" + "        " + "nombre" + "        " + "descripcion" + "\n" +rs.getInt("id_equipo")+
-                        "          " + rs.getInt("id_categoria")+
-                        "                  " +rs.getString("nombre")+
-                        "            "   + rs.getString("descripcion")+
-                        "\n");
-            }
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -449,12 +358,7 @@ public class SQLite {
             String sql3 =  "SELECT id_categoria,nombre,descripcion FROM categorias_equipo";
             Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql3);
-            while (rs.next()) {
-                System.out.println("id_categoria" + "      " + "nombre" + "      "+ "descripcion" + "\n" +rs.getInt("id_categoria")+
-                        "                " +        rs.getString("nombre")+
-                        "          " +        rs.getString("descripcion")+
-                        "\n");
-            }
+            
             return conexion;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -581,17 +485,15 @@ public class SQLite {
             stat.execute(sql17);
             return conexion;
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (Exception e ) {
             Connection conexion = null;
             return conexion;
         }
     }
-    public static void insertar_basededatos(String ruta, String usuario, String contrasena) throws SQLException {
+    public static Connection insertar_basededatos(String ruta, String usuario, String contrasena, Connection conexion) throws SQLException {
         int var1, var2, var3, var9;
         boolean var8;
         String var4, var5, var6, var7;
-        Connection conexion = DriverManager.getConnection("jdbc:sqlite::memory:");
         //El statement que sera usado para correr las query en sqlite
         String sql3 = "SELECT clv_grupo, turno FROM grupos";
         Statement stmt = conexion.createStatement();
@@ -1141,202 +1043,109 @@ public class SQLite {
                 throwables.printStackTrace();
             }
         }
+        return conexion;
     }
 
     //Las busquedas son basicamente lo que viste arriba para mostrar texto
 
-    public static void busqueda_volatil2(Connection conexion) throws SQLException {
+    public static Connection busqueda_volatil2(Connection conexion) throws SQLException {
         //El statement que sera usado para correr las query en sqlite
         Statement stat = conexion.createStatement();
         String sql3 = "SELECT id, name, capacity FROM warehouses";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println(rs.getInt("id") + "\t" + rs.getString("name") + "\t" + rs.getDouble("capacity"));
-        }
+        return conexion;
     }
-    public static void busqueda_materia(Connection conexion) throws SQLException {
+    public static Connection busqueda_materia(Connection conexion) throws SQLException {
         String sql3 = "SELECT nombre_materia,clv_materia,creditos,cuatrimestre,posicion,clv_plan,horas_x_semana,tipo_materia  FROM materia";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("nombre_materia"+ "     "+ "clv_materia" + "     " + "creditos" + "     " + "cuatrimestre" + "     " + "posicion" + "      " + "clv_plan" + "      " + "horas_x_semana" + "     " + "tipo_materia"+ "\n"+
-                    rs.getString("nombre_materia")+
-                    "                 " +     rs.getString("clv_materia")+
-                    "             " +     rs.getInt("creditos")+
-                    "           " +     rs.getInt("cuatrimestre")+
-                    "               " +     rs.getInt("posicion")+
-                    "            " +     rs.getString("clv_plan")+
-                    "           " +     rs.getInt("horas_x_semana")+
-                    "                 " +     rs.getString("tipo_materia")+
-                    "\n");
-        }
+        return conexion;
 
     }
-    public static void busqueda_usuario(Connection conexion) throws SQLException{
+    public static Connection busqueda_usuario(Connection conexion) throws SQLException{
         String sql3 = "SELECT clv_usuario,idcarrera,nombre_usuario,nivel_ads,contrato FROM usuarios";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_usuario" + "     "+ "idcarrera"+ "     "+ "nombre_usuario"+ "      " + "nivel_ads" + "      " + "contrato"+ "\n"+
-                    rs.getString("clv_usuario")+
-                    "              " + rs.getInt("idcarrera")+
-                    "            " + rs.getString("nombre_usuario")+
-                    "                 " + rs.getString("nivel_ads")+
-                    "            " + rs.getString("contrato")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_grupo_materia_profesor(Connection conexion) throws SQLException{
+    public static Connection busqueda_grupo_materia_profesor(Connection conexion) throws SQLException{
         String sql3 = "SELECT clv_grupo,clv_materia,clv_usuario FROM grupo_materia_profesor";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_grupo" + "     " + "clv_materia" + "      "+ "clv_usuario"+ "\n"+
-                    rs.getString("clv_grupo")+
-                    "            " +       rs.getString("clv_materia")+
-                    "              " +       rs.getString("clv_usuario")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_login(Connection conexion) throws SQLException{
+    public static Connection busqueda_login(Connection conexion) throws SQLException{
         String sql3 = "SELECT clv_usuario,pass_usuario,tipo_usuario  FROM login";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_usuario" + "      " + "pass_usuario" + "      "+ "tipo_usuario" + "\n" +rs.getString("clv_usuario")+
-                    "               " +        rs.getString("pass_usuario")+
-                    "               " +        rs.getString("tipo_usuario")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_disponibilidad(Connection conexion) throws SQLException{
+    public static Connection busqueda_disponibilidad(Connection conexion) throws SQLException{
         String sql3 = "SELECT dia,espacio_tiempo,clv_usuario FROM disponibilidad";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("dia" + "      " + "espacio_tiempo" + "      "+ "clv_usuario" + "\n" +rs.getString("dia")+
-                    "       " +        rs.getString("espacio_tiempo")+
-                    "                  " +        rs.getString("clv_usuario")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_carrera(Connection conexion) throws SQLException{
+    public static Connection busqueda_carrera(Connection conexion) throws SQLException{
         String sql3 = "SELECT idcarrera,nombre_carrera FROM carrera";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("idcarrera" + "   " + "nombre_carrera" + "\n"+ rs.getString("idcarrera")+
-                    "         "  +  rs.getString("nombre_carrera") +
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_prestamo(Connection conexion) throws SQLException{
+    public static Connection busqueda_prestamo(Connection conexion) throws SQLException{
         String sql3 = "SELECT clv_usuario,idcarrera FROM prestamos";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_usuarios" + "   " + "idcarrera" + "\n"+ rs.getString("clv_usuarios")+
-                    "             "  +  rs.getString("idcarrera")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_plan_estudios(Connection conexion) throws SQLException{
+    public static Connection busqueda_plan_estudios(Connection conexion) throws SQLException{
         String sql3 =  "SELECT clv_plan,nombre_plan,nivel,idcarrera FROM plan_estudios";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_plan"+ "   " + "nombre_plan" + "        " + "nivel" + "        " + "idcarrera" + "\n" +rs.getString("clv_plan")+
-                    "         " + rs.getString("nombre_plan")+
-                    "                " +rs.getString("nivel")+
-                    "          "   + rs.getInt("idcarrera")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_aulas(Connection conexion) throws SQLException{
+    public static Connection busqueda_aulas(Connection conexion) throws SQLException{
         String sql3 =  "SELECT id_aula, nombre, tipo, capacidad FROM aulas";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("id_aula"+ "   " + "nombre" + "        " + "tipo" + "        " + "capacidad" + "\n" +rs.getString("id_aula")+
-                    "        " + rs.getInt("capacidad")+
-                    "            " +rs.getString("nombre")+
-                    "         "   + rs.getString("tipo")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_grupo(Connection conexion) throws SQLException{
+    public static Connection busqueda_grupo(Connection conexion) throws SQLException{
         String sql3 = "SELECT clv_grupo,turno FROM grupo";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_grupo" + "   " + "turno" + "\n"+ rs.getString("clv_grupo")+
-                    "          "  +  rs.getBoolean("turno")+
-                    "\n");
-        }
-
+        return conexion;
     }
-    public static void busqueda_materia_usuario(Connection conexion) throws SQLException{
+    public static Connection busqueda_materia_usuario(Connection conexion) throws SQLException{
         String sql3 =  "SELECT clv_materia,clv_plan,clv_usuario,puntos_confianza,puntos_director FROM materia_usuario";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("clv_materia" + "     "+ "clv_plan"+ "     "+ "clv_usuario"+ "      " + "puntos_confianza" + "      " + "puntos_director"+ "\n"+
-                    rs.getString("clv_materia")+
-                    "              " + rs.getString("clv_plan")+
-                    "          " + rs.getString("clv_usuario")+
-                    "              " + rs.getInt("puntos_confianza")+
-                    "                    " + rs.getString("puntos_director")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void uso_aula_grupo(Connection conexion) throws SQLException{
+    public static Connection uso_aula_grupo(Connection conexion) throws SQLException{
         String sql3 =  "SELECT dia,espacio_tiempo,id_aula,clv_grupo,clv_materia FROM uso_aula_grupo";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("dia" + "     "+ "espacio_tiempo"+ "     "+ "id_aula"+ "      " + "clv_grupo" + "      " + "clv_materia"+ "\n"+
-                    rs.getInt("dia")+
-                    "      " + rs.getInt("espacio_tiempo")+
-                    "                 " + rs.getString("id_aula")+
-                    "           " + rs.getString("clv_grupo")+
-                    "            " + rs.getString("clv_materia")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_aula_equipo(Connection conexion) throws SQLException{
+    public static Connection busqueda_aula_equipo(Connection conexion) throws SQLException{
         String sql3 = "SELECT id_equipo,id_aula,cantidad FROM aula_equipo";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("id_equipo" + "      " + "id_aula" + "      "+ "cantidad" + "\n" +rs.getInt("id_equipo")+
-                    "             " +        rs.getString("id_aula")+
-                    "           " +        rs.getInt("cantidad")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_equipo(Connection conexion) throws SQLException{
+    public static Connection busqueda_equipo(Connection conexion) throws SQLException{
         String sql3 =  "SELECT id_equipo,id_categoria,nombre,descripcion FROM equipo";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("id_equipo"+ "   " + "id_categoria" + "        " + "nombre" + "        " + "descripcion" + "\n" +rs.getInt("id_equipo")+
-                    "          " + rs.getInt("id_categoria")+
-                    "                  " +rs.getString("nombre")+
-                    "            "   + rs.getString("descripcion")+
-                    "\n");
-        }
+        return conexion;
     }
-    public static void busqueda_categorias_equipo(Connection conexion) throws SQLException{
+    public static Connection busqueda_categorias_equipo(Connection conexion) throws SQLException{
         String sql3 =  "SELECT id_categoria,nombre,descripcion FROM categorias_equipo";
         Statement stmt = conexion.createStatement();
         ResultSet rs = stmt.executeQuery(sql3);
-        while (rs.next()) {
-            System.out.println("id_categoria" + "      " + "nombre" + "      "+ "descripcion" + "\n" +rs.getInt("id_categoria")+
-                    "                " +        rs.getString("nombre")+
-                    "          " +        rs.getString("descripcion")+
-                    "\n");
-        }
+        return conexion;
     }
     public static void conexionBD(String ruta, String usuario, String contrasena){
         //Para el que este leyendo esto: Estos prints son para poder agarrar los datos del usuario
@@ -1359,7 +1168,180 @@ public class SQLite {
             throwables.printStackTrace();
         }
     }
+    public static List<String> consultaPlan(){
+        List<String> plan = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT clv_plan FROM plan_estudios" ;
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    System.out.println(rs.getString(1));
+                    plan.add(rs.getString(1));
+                }
+            }
+            return plan;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return plan;
+    }
+    public static List<String> consultaMateria(String plan){
+
+        List<String> materias = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT clv_materia FROM materia where clv_plan = " + plan ;
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    System.out.println(rs.getString(1));
+                    materias.add(rs.getString(1));
+                }
+            }
+            return materias;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return materias;
+    }
+    public static List<String> consultaProfesor(){
+
+        List<String> user = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT clv_usuario FROM usuarios";
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    user.add(rs.getString(1));
+                }
+            }
+            return user;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return user;
+    }
+    public static List<String> consultaCarrera(){
+
+        List<String> user = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT idcarrera FROM carrera";
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    user.add(rs.getString(1));
+                }
+            }
+            return user;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return user;
+    }
+    public static ArrayList<Usuarios> consultaProfesorTodo(){
+
+        ArrayList<Usuarios> user = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT * FROM usuarios";
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                Usuarios x;
+                while (rs.next()){
+                    x = new Usuarios();
+                    x.setClv_usuario(rs.getString(1));
+                    x.setId_carrera(Integer.parseInt(rs.getString(2)));
+                    x.setNombre_usuario(rs.getString(3));
+                    x.setNivel_ads(rs.getString(4));
+                    x.setContrato(rs.getString(5));
+                    user.add(x);
+                }
+            }
+            return user;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return user;
+    }
+    public static List<String> consultaCategoria(){
+
+        List<String> user = new ArrayList<>();
+
+        String query = "";
+        query = "SELECT id_categoria FROM categorias_equipo";
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    user.add(rs.getString(1));
+                }
+            }
+            return user;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return user;
+    }
+    public static ArrayList<Carrera> consultaCarreraTodo(){
+
+        ArrayList<Carrera> user = new ArrayList<>();
+        String query = "";
+        query = "SELECT * FROM carrera";
+
+        try{
+            if (ekisde != null) {
+                Statement stmt = ekisde.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                Carrera x;
+                while (rs.next()){
+                    x = new Carrera();
+                    x.setId_carrera(Integer.parseInt(rs.getString(1)));
+                    x.setNombre_carrera(rs.getString(2));
+                    user.add(x);
+                }
+            }
+            return user;
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            System.out.println("error");
+        }
+        return user;
+    }
 }
+
 
 
 

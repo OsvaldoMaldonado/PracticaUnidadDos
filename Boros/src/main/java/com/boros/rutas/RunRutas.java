@@ -1,6 +1,8 @@
 package com.boros.rutas;
 
-import com.boros.main.Main;
+import com.boros.main.Controller;
+import com.boros.main.Controller_AutoEvaluacion;
+import com.boros.main.Controller_AutoEvaluacion.*;
 import java.io.*;
 import java.util.Scanner;
 
@@ -42,10 +44,8 @@ public class RunRutas {
                     rutaXLSX += linea.charAt(j);
                 }
             }
-            Main.usuario = usuario;
-            Main.contrasenia = contrasenia;
-            Main.rutaTXT = rutaTXT;
-            Main.rutaXLSX = rutaXLSX;
+            Controller.rutaTXT = rutaTXT;
+            Controller.rutaXLSX = rutaXLSX;
 
         } catch (FileNotFoundException e) {
             System.out.println("Aurchivo No Encontrado");

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.stage.Stage?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.stage.*?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Stage xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boros.main.Controller_Menu">
     <scene>
         <Scene>
             <AnchorPane prefHeight="598.0" prefWidth="1058.0">
@@ -49,7 +46,7 @@
                                  <Font size="16.0" />
                               </font>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Profesores" textFill="WHITE">
+                           <Button fx:id="usuarios2" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#VentanaUsuarios" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Profesores" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -61,7 +58,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Materias" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaMateria" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Materias" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -73,7 +70,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Aulas" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaAulas" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Aulas" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -97,7 +94,7 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Planes" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ventanaPlan" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Planes" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -109,7 +106,31 @@
                                  </ImageView>
                               </graphic>
                            </Button>
-                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Evaluar Profesor" textFill="WHITE">
+                           <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="106.0" mnemonicParsing="false" onAction="#ventanaEquipo" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Equipo" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@layers_50px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button fx:id="Evaluar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#VentanaEvaluar" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Evaluar Profesor" textFill="WHITE">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <graphic>
+                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@pencil_32px.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                           </Button>
+                           <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#ventanaPrestamo" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: transparente;" text="Prestamos" textFill="WHITE">
                               <font>
                                  <Font size="16.0" />
                               </font>
@@ -125,12 +146,12 @@
                      </VBox>
                      <ImageView fitHeight="66.0" fitWidth="132.0" layoutX="36.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@Logo%20upv%20(2).png" />
+                           <Image url="@Logo upv (2).png" />
                         </image>
                      </ImageView>
                   </children>
                </AnchorPane>
-               <Button layoutX="239.0" layoutY="147.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #00B8EE;" text="Carreras" textFill="WHITESMOKE">
+               <Button fx:id="carrera" layoutX="239.0" layoutY="147.0" mnemonicParsing="false" onAction="#ventanaCarreras" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #00B8EE;" text="Carreras" textFill="WHITESMOKE">
                   <font>
                      <Font size="24.0" />
                   </font>
@@ -142,7 +163,7 @@
                      </ImageView>
                   </graphic>
                </Button>
-               <Button layoutX="448.0" layoutY="147.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #019C50;" text="Usuarios" textFill="#f5f4f4">
+               <Button fx:id="usuarios" layoutX="448.0" layoutY="147.0" mnemonicParsing="false" onAction="#VentanaUsuarios" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #019C50;" text="Usuarios" textFill="#f5f4f4">
                   <font>
                      <Font size="24.0" />
                   </font>
@@ -153,7 +174,7 @@
                         </image>
                      </ImageView>
                   </graphic></Button>
-               <Button layoutX="646.0" layoutY="147.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #E98C13;" text="Aulas" textFill="#f5f4f4">
+               <Button layoutX="646.0" layoutY="147.0" mnemonicParsing="false" onAction="#ventanaAulas" prefHeight="92.0" prefWidth="179.0" style="-fx-background-color: #E98C13;" text="Aulas" textFill="#f5f4f4">
                   <font>
                      <Font size="24.0" />
                   </font>

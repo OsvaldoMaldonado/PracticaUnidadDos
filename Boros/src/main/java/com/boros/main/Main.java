@@ -1,64 +1,118 @@
 package com.boros.main;
 
 import com.boros.mysql.*;
-import com.boros.rutas.*;
-import com.boros.txt.*;
 import com.boros.xlsx.*;
-
+import com.boros.txt.*;
+import com.boros.rutas.*;
+import com.boros.sqlite.*;
 import com.mysql.jdbc.Connection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class Main extends Application {
 
-    public static String usuario;
-    public static String contrasenia;
-    public static String rutaTXT;
-    public static String rutaXLSX;
-
-    public static void main(String[] args) throws SQLException, IOException {
-
+    public static void main(String[] args) throws SQLException {
+        Controller.initialize();
         launch(args);
-/*      System.out.println("---- Lectura de Rutas ----");
-        System.out.println("");
-        RunRutas.cambioRuta();
-        System.out.println("---- Lectura de TXT ----");
-        RunTXT.lecturaTXT(rutaTXT);
-        System.out.println("");
-        System.out.println("---- Lectura XLSX ----");
-        System.out.println("");
-        RunXLSX.lecturaXLSX(rutaXLSX);
-        System.out.println("");
-        Connection connect = Conexion.conexion();
-        if(connect != null){
-            System.out.println("---- CRUD de MySQL ----");
-            try {
-                RunDB.baseDeDatos();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }else{
-            System.out.println("No se pudo realizar el CRUD de MySQL debido a un fallo en la conexion");
-        }
-        */
     }
 
-    public void start(Stage stage) throws Exception{
 
-            stage  = FXMLLoader.load(getClass().getResource("/Nueva_Materia.fxml"));
-            stage.show();
-
+    @Override
+    public void start(Stage stage) throws Exception {
+        stage  = FXMLLoader.load(getClass().getResource("/menu.fxml"));
+        stage.show();
     }
-    public void recursos(){
+    public void evaluacion(){
         try {
-            Stage op = FXMLLoader.load(getClass().getResource("/recursos.fxml"));
+            Stage op = FXMLLoader.load(getClass().getResource("/Evaluar.fxml"));
+            op.show();
+        } catch (IOException e) {
+
+        }
+    }
+    public void profesor(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Nuevo_Profesor.fxml"));
+            op.show();
+        } catch (IOException e) {
+
+        }
+    }
+    public void nuevoProfesor(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Nuevo_Profesor.fxml"));
+            op.show();
+        } catch (IOException e) {
+
+        }
+    }
+    public void carrera(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Carreras.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevaCarrera(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Nueva_Carreras.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevaAula(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Nueva_Aula.fxml"));
             op.show();
         } catch (IOException e) {
         }
     }
 
+    public void nuevaMateria(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Nueva_Materia.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevoPrestamo(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Prestamo.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevoEquipo(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Equipo.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
 
+    public void nuevaCategoria(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Nueva_Categoria.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevoPlan(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/Formulario_Plan.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
+    public void nuevoInicio(){
+        try {
+            Stage op = FXMLLoader.load(getClass().getResource("/menu.fxml"));
+            op.show();
+        } catch (IOException e) {
+        }
+    }
 }

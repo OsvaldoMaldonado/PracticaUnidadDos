@@ -1,3 +1,5 @@
 aulas,A207,A207,Laboratorio,32,
 plan_estudios,27011,ITI,ING,6,
 usuarios,1830124,6,Edgar,ING,PTC,
+materias,ingles,Ing,12,8,5,27011,10,TV,
+carrera,1,ITI,
